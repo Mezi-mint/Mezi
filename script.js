@@ -13,6 +13,9 @@ const nameEntry = document.getElementById("name-entry");
 let quizStartTime;
 let currentQuestionIndex = 0;
 let score = 0;
+let playerAnswers = [];
+let shownQuestions = [];
+
 const totalQuestions = 30; // 29 random + 1 cố định
 
 // 100 câu hỏi giả lập
@@ -149,6 +152,9 @@ function showQuestion(index) {
             // Vô hiệu hóa các nút sau khi chọn
             options.forEach(o => o.disabled = true);
 
+            shownQuestions.push(q.question);
+            playerAnswers.push(q.options[i]);
+
             if (q.options[i] === q.answer) {
                 btn.style.backgroundColor = "green";
                 score++;
@@ -217,7 +223,9 @@ function handleNameSubmit() {
             score: score,
             result: `${score}/${totalQuestions}`,
             time_taken_seconds: durationSeconds,
-            timestamp: new Date().toISOString()
+            timestamp: new Date().toISOString(),
+            questions: shownQuestions,
+            answers: playerAnswers
         };
 
         fetch("/.netlify/functions/submitQuiz", {
