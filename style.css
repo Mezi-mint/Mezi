@@ -1,0 +1,181 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', sans-serif;
+    background-color: #000;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center
+}
+
+.result-container {
+    background: radial-gradient(circle at center, #1a1c20, #0a0a0c);
+    border: 2px solid #4fd1ff;
+    border-radius: 20px;
+    padding: 50px 60px;
+    max-width: 480px;
+    margin: 80px auto;
+    color: #cdeeff;
+    box-shadow: 0 0 30px #4fd1ff88;
+    text-align: center;
+    font-family: "Orbitron", sans-serif;
+    animation: fadeIn 1.2s ease forwards
+}
+
+.result-container h2 {
+    font-size: 2.4rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 12px #00f0ff
+}
+
+.score-display {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #00f0ff;
+    text-shadow: 0 0 20px #00f0ffaa;
+    margin-bottom: 40px
+}
+
+.name-input-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px
+}
+
+.name-input-wrapper input {
+    padding: 12px 20px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: none;
+    background: #111418;
+    color: #cdeeff;
+    width: 65%;
+    transition: 0.3s ease;
+    border: 2px solid #00f0ff88
+}
+
+.name-input-wrapper input:focus {
+    outline: none;
+    box-shadow: 0 0 10px #00f0ffaa;
+    border-color: #00f0ff
+}
+
+.name-input-wrapper button {
+    padding: 12px 20px;
+    background-color: #00f0ff;
+    border: none;
+    border-radius: 10px;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background 0.3s ease
+}
+
+.name-input-wrapper button:hover {
+    background-color: #009bb3;
+    color: #fff
+}
+
+#player-name-display {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 30px;
+    color: #00f0ff;
+    text-shadow: 0 0 12px #00f0ff88;
+    animation: fadeInText 1s ease-in-out forwards
+}
+
+@keyframes fadeInText {
+    from {
+        opacity: 0;
+        transform: scale(.8)
+    }
+    to {
+        opacity: 1;
+        transform: scale(1)
+    }
+}
+
+.container {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px
+}
+
+h1,
+h2 {
+    font-weight: 400;
+    animation: fadeIn 2s ease-in-out
+}
+
+button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    margin-top: 20px;
+    background: #00f2ff;
+    border: none;
+    color: #000;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: transform 0.2s ease
+}
+
+button:hover {
+    transform: scale(1.1)
+}
+
+.options {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 15px;
+    margin-top: 30px
+}
+
+.option {
+    background: #222;
+    border: 2px solid #00f2ff;
+    color: #fff
+}
+
+.option:hover {
+    background: #00f2ff;
+    color: #000
+}
+
+.progress {
+    font-size: 1.2rem;
+    margin-bottom: 15px
+}
+
+.admin {
+    position: fixed;
+    bottom: 23px;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 1.2rem;
+    color: #009617;
+    opacity: 1;
+    font-style: italic;
+    pointer-events: none
+}
+
+.hidden {
+    display: none
+}
+
+.fade-in {
+    animation: fadeIn 1.5s ease forwards
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px)
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0)
+    }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>What?</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <div id="intro-screen" class="fade-in">
+            <h1>Welcome to riddle<br>iem có muốn giải những câu đố này khôm?<br>>:)</h1>
+            <button id="start-btn">Tiếp tục →</button>
+        </div>
+        <div id="quiz-screen" class="hidden">
+            <div class="progress">Câu <span id="current-question">1</span>/30</div>
+            <div class="question" id="question-text">Câu hỏi sẽ hiện ở đây</div>
+            <div class="options">
+                <button class="option">A</button>
+                <button class="option">B</button>
+                <button class="option">C</button>
+                <button class="option">D</button>
+            </div>
+        </div>
+        <div id="result-screen" class="hidden result-container">
+            <h2 id="result-message">Kết quả của bạn</h2>
+            <p id="score" class="score-display"></p>
+            <div id="name-entry">
+                <div class="name-input-wrapper">
+                    <input id="player-name" type="text" placeholder="Nhập tên của bạn..." />
+                    <button id="submit-name">➤</button>
+                </div>
+            </div>
+            <p id="player-name-display" class="hidden"></p>
+        </div>
+        <div class="admin">Ideas By MeZi Mint<br>(MiZi Mei)</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
